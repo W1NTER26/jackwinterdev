@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Information Example</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #252422; /* Dark background */
+            color: #EDEDED; /* Light text color */
+            font-family: 'Source Code Pro', sans-serif;
+            text-align: center; /* Center text */
+            padding: 20px;
+        }
+
+        .button {
+            color: white; /* Text color */
+            background-color: #007BFF; /* Button color */
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded corners */
+            padding: 10px 20px; /* Button padding */
+            font-size: 16px; /* Font size */
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: background-color 0.3s; /* Transition for hover effect */
+        }
+
+        .button:hover {
+            background-color: #0056b3; /* Darker shade on hover */
+        }
+
+        .info {
+            display: none; /* Initially hidden */
+            margin-top: 20px; /* Space above the info */
+            padding: 10px;
+            background-color: #333; /* Background color for the info */
+            border-radius: 5px; /* Rounded corners */
+        }
+    </style>
+</head>
+<body>
+
+    <button class="button" onclick="toggleInfo()">Toggle Information</button>
+
+    <div class="info" id="infoSection">
+        <p>This is the information that can be shown or hidden when the button is clicked. You can put any content here, such as text, images, or other elements.</p>
+    </div>
+
+    <script>
+        function toggleInfo() {
+            const infoSection = document.getElementById('infoSection');
+            if (infoSection.style.display === 'none' || infoSection.style.display === '') {
+                infoSection.style.display = 'block'; // Show the info
+            } else {
+                infoSection.style.display = 'none'; // Hide the info
+            }
+        }
+    </script>
+
+</body>
+</html>

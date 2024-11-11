@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful Buttons Example</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full viewport height */
+            background-color: #f0f0f0; /* Light gray background */
+            font-family: Arial, sans-serif; /* Font style */
+        }
+
+        .button {
+            color: white; /* Text color */
+            border: 2px solid; /* Border color */
+            border-radius: 5px; /* Rounded corners */
+            padding: 10px 20px; /* Button padding */
+            font-size: 16px; /* Font size */
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: transform 0.1s, background-color 0.3s; /* Transition for effects */
+            margin: 10px; /* Space between buttons */
+        }
+
+        .orange-button {
+            background-color: #FFA500; /* Orange color */
+            border-color: #FF8C00; /* Darker orange border */
+        }
+
+        .orange-button:active {
+            transform: translateY(2px); /* Push in effect */
+        }
+
+        .orange-button:hover {
+            background-color: #FF8C00; /* Darker shade on hover */
+        }
+
+        .green-button {
+            background-color: #32CD32; /* Lime green color */
+            border-color: #228B22; /* Darker green border */
+        }
+
+        .green-button:active {
+            transform: translateY(2px); /* Push in effect */
+        }
+
+        .green-button:hover {
+            background-color: #228B22; /* Darker shade on hover */
+        }
+
+        .blue-button {
+            background-color: #1E90FF; /* Dodger blue color */
+            border-color: #1C86EE; /* Darker blue border */
+        }
+
+        .blue-button:active {
+            transform: translateY(2px); /* Push in effect */
+        }
+
+        .blue-button:hover {
+            background-color: #1C86EE; /* Darker shade on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <button class="button orange-button">Orange Button</button>
+    <button class="button green-button">Green Button</button>
+    <button class="button blue-button">Blue Button</button>
+
+</body>
+</html>
