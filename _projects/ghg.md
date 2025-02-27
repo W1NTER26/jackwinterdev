@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Green Hat Gravity
-description: Game
+description: Space Platform Game
 url: /projects/ghg/
 ---
 <html lang="en">
