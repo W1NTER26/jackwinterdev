@@ -2,4 +2,4 @@
 layout: default
 title: about
 ---
-I’m Jack Winter, a [your role]. Check out my [Projects](/projects)!
+I’m Jack Winter, a CS Major. Check out my [Projects](/projects)!
