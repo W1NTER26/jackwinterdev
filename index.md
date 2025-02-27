@@ -2,4 +2,6 @@
 layout: default
 title: jackwinter.dev
 ---
-I’m Jack Winter, a [your role]. Check out my [Projects](/projects)!
+Hi there!
+Im Jack Winter
+Im a CS Major at the University of Arizona
