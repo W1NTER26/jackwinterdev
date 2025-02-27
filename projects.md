@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Projects
+title: projects - jw.dev
 ---
 <h2>My Projects</h2>
 <ul>
