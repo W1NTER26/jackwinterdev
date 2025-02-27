@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Green Hat Gravity.
+title: Green Hat Gravity
 description: Game
 url: /projects/ghg/
 ---
