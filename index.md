@@ -2,6 +2,6 @@
 layout: default
 title: jackwinter.dev
 ---
-Hi there!
-Im Jack Winter
-Im a CS Major at the University of Arizona
+Hi there!<br>
+Im Jack Winter<br>
+Im a CS Major at the University of Arizona<br>
