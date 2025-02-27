@@ -1,5 +1,5 @@
 ---
 layout: default
-title: about - jw.dev
+title: about
 ---
 I’m Jack Winter, a [your role]. Check out my [Projects](/projects)!
