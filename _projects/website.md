@@ -1,7 +1,7 @@
 ---
 layout: default
-title: the website
-description: The jackwinter.dev website
+title: The Website
+description: The Jackwinter.dev Website
 url: /projects/website/
 ---
 The Website.
