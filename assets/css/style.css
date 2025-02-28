@@ -1,0 +1,242 @@
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+ @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap");
+ @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"); /* Modern font */
+ 
+ html {
+   font-family: sans-serif; /* 1 */
+   -ms-text-size-adjust: 100%; /* 2 */
+   -webkit-text-size-adjust: 100%; /* 2 */
+ }
+ 
+ body.dark-mode {
+   background-color: #1e1e1e; /* Darker, sleek dark gray */
+   color: #ffffff; /* White text for contrast */
+   font-family: 'Inter', Arial, sans-serif; /* Modern, clean font */
+   line-height: 1.6;
+ }
+ 
+ body {
+   margin: 0;
+   padding: 0;
+ }
+ 
+ /* Navbar (sticky, dark, icons only) */
+ .navbar {
+   background-color: #2a2a2a; /* Even darker navbar */
+   padding: 0.5rem;
+   position: fixed;
+   width: 100%;
+   top: 0;
+   z-index: 1000;
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Stronger shadow for modern look */
+   display: flex;
+   justify-content: center;
+   gap: 1rem; /* Space between icons */
+   transition: background-color 0.3s ease; /* Smooth transition */
+ }
+ .navbar a {
+   color: #b3d4fc; /* Light blue for icons */
+   text-decoration: none;
+   font-size: 1.5rem; /* Larger icons */
+   display: flex;
+   align-items: center;
+ }
+ .navbar a:hover {
+   color: #e6f7ff; /* Lighter blue on hover */
+ }
+ .navbar i {
+   transition: transform 0.3s ease; /* Smooth icon scale on hover */
+ }
+ .navbar a:hover i {
+   transform: scale(1.1); /* Slight scale on hover for modern feel */
+ }
+ 
+ /* Main content (full-screen, centered, sleek) */
+ .main-content {
+   max-width: 100%;
+   margin: 60px 0 0; /* Offset for navbar */
+   padding: 0;
+   background-color: transparent; /* No background for full-screen */
+   min-height: calc(100vh - 60px); /* Full screen minus navbar */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+ .content-wrapper {
+   text-align: center; /* Center text */
+   max-width: 800px;
+   padding: 2rem;
+   background-color: rgba(43, 43, 43, 0.9); /* Semi-transparent darker background for content */
+   border-radius: 12px; /* Rounded corners for sleekness */
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Enhanced shadow for modern look */
+   transition: all 0.3s ease; /* Smooth transitions */
+ }
+ .site-title {
+   font-size: 2.8rem; /* Larger, modern title */
+   color: #ffffff;
+   margin-bottom: 1.5rem;
+   font-weight: 700;
+   text-transform: uppercase;
+   letter-spacing: 2px; /* Modern, sleek spacing */
+   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
+ }
+ 
+ /* Project list (modern, centered, sleek cards) */
+ .project-list {
+   display: grid;
+   gap: 1.5rem;
+   list-style: none;
+   padding: 0;
+   max-width: 800px;
+   margin: 0 auto; /* Center the grid */
+ }
+ .project {
+   padding: 1.5rem;
+   background-color: #2b2b2b; /* Slightly darker for sleekness */
+   border-radius: 12px; /* Larger rounded corners */
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Enhanced shadow */
+   text-align: center; /* Center content */
+   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+ }
+ .project:hover {
+   transform: translateY(-5px); /* Lift on hover for modern feel */
+   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5); /* Stronger shadow on hover */
+ }
+ .project h2 {
+   color: #b3d4fc;
+   margin-bottom: 0.5rem;
+   font-size: 1.6rem;
+   font-weight: 600;
+ }
+ .project p {
+   color: #e0e0e0;
+   font-size: 1.1rem;
+ }
+ .project a {
+   color: #b3d4fc;
+   text-decoration: none;
+ }
+ .project a:hover {
+   text-decoration: underline;
+   color: #e6f7ff;
+ }
+ 
+ /* Footer (dark, centered, sleek) */
+ .footer {
+   background-color: #1e1e1e; /* Match body background */
+   padding: 1rem;
+   text-align: center;
+   border-top: 1px solid #3a3a3a; /* Slightly lighter border */
+   margin-top: 2rem;
+ }
+ .footer p {
+   color: #b3d4fc;
+   font-size: 0.9rem;
+ }
+ 
+ /* Full-screen "Green Hat Gravity" canvas (modern, centered) */
+ .game-container {
+   background: #000 !important; /* Keep game’s black background */
+   overflow: hidden;
+   margin: 0;
+   border: 2px solid #ff4444;
+   width: 100vw; /* Full viewport width */
+   height: 100vh; /* Full viewport height */
+   max-width: none; /* Remove max-width for full screen */
+   max-height: none; /* Remove max-height for full screen */
+   display: flex;
+   justify-content: center;
+   align-items: center; /* Center the canvas */
+ }
+ canvas {
+   display: block;
+   width: 100%; /* Fill container */
+   height: 100%; /* Fill container */
+   object-fit: contain; /* Maintain aspect ratio, no stretching */
+ }
+ 
+ /* Responsive design (mobile-friendly) */
+ @media (max-width: 768px) {
+   .main-content {
+     margin: 60px 0 0;
+     padding: 0;
+   }
+   .content-wrapper {
+     padding: 1rem;
+     margin: 0 1rem;
+   }
+   .navbar {
+     padding: 0.3rem;
+     gap: 0.5rem;
+   }
+   .nav-link {
+     font-size: 1.2rem;
+   }
+   .site-title {
+     font-size: 2.2rem;
+   }
+   .project {
+     padding: 1rem;
+   }
+   .project h2 {
+     font-size: 1.4rem;
+   }
+   .project p {
+     font-size: 1rem;
+   }
+   .game-container {
+     border-width: 1px; /* Thinner border on mobile */
+   }
+ }
+ 
+ /* Highlight (code blocks) for dark mode */
+ .highlight {
+   background-color: #2b2b2b; /* Darker gray for code blocks */
+ }
+ .highlight .cm, .highlight .cp, .highlight .c1, .highlight .cs, .highlight .c, .highlight .cd {
+   color: #999988; /* Gray comments */
+ }
+ .highlight .err {
+   color: #ff5555; /* Red for errors */
+   background-color: #2b1b1b; /* Darker red background */
+ }
+ .highlight .gd {
+   color: #ffdddd; /* Light red for deletions */
+   background-color: #2b2b2b; /* Dark background */
+ }
+ .highlight .gi {
+   color: #ddffdd; /* Light green for insertions */
+   background-color: #2b2b2b; /* Dark background */
+ }
+ .highlight .k, .highlight .kc, .highlight .kd, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kt, .highlight .kv {
+   color: #a0c8ff; /* Light blue for keywords */
+ }
+ .highlight .m, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .mo, .highlight .mb, .highlight .mx {
+   color: #66d9ef; /* Cyan for numbers */
+ }
+ .highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .se, .highlight .sh, .highlight .si, .highlight .sx, .highlight .sr, .highlight .s1, .highlight .ss {
+   color: #e6db74; /* Yellow for strings */
+ }
+ .highlight .na {
+   color: #a6e22e; /* Green for names */
+ }
+ .highlight .nb, .highlight .nc, .highlight .no, .highlight .nd, .highlight .ni, .highlight .ne, .highlight .nf, .highlight .nl, .highlight .nn, .highlight .nt, .highlight .vc, .highlight .vg, .highlight .vi, .highlight .nv {
+   color: #f92672; /* Magenta for variables/names */
+ }
+ .highlight .ow {
+   color: #f8f8f2; /* White for operators */
+ }
+ .highlight .o {
+   color: #f8f8f2; /* White for operators */
+ }
+ 
+ /* Transitions for smooth, modern effects */
+ .navbar, .nav-link, .main-content, .content-wrapper, .footer, .project {
+   transition: all 0.3s ease;
+ }

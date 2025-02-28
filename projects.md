@@ -1,15 +1,17 @@
 ---
 layout: default
-title: projects
+title: My Projects
 ---
-<h2>My Projects</h2>
-<ul>
+# My Projects
+
+<div class="project-list">
   {% for project in site.projects %}
-    <li>
-      <strong>{{ project.title }}</strong>: {{ project.description | default: "No description available" }}
+    <div class="project">
+      <h2>{{ project.title }}</h2>
+      <p>{{ project.description | default: "No description available" }}</p>
       {% if project.url %}
         <a href="{{ project.url }}">View</a>
       {% endif %}
-    </li>
+    </div>
   {% endfor %}
-</ul>
+</div>
