@@ -245,7 +245,6 @@
 
 /* Added my own link css code,*/
 
-
 body.dark-mode .main-content a[href="/projects"] {
   color: #66d9ef; /* Bright cyan for techy look */
   text-decoration: none;
