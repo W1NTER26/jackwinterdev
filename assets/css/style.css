@@ -6,7 +6,7 @@
  *    user zoom.
  */
  @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap");
- @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"); /* Modern font */
+ @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;700&display=swap"); /* Techy font + fallback */
  
  html {
    font-family: sans-serif; /* 1 */
@@ -17,13 +17,8 @@
  body.dark-mode {
    background-color: #1e1e1e; /* Darker, sleek dark gray */
    color: #ffffff; /* White text for contrast */
-   font-family: 'Inter', Arial, sans-serif; /* Modern, clean font */
+   font-family: 'JetBrains Mono', 'Inter', Arial, sans-serif; /* Techy monospace font with fallback */
    line-height: 1.6;
- }
- 
- body {
-   margin: 0;
-   padding: 0;
  }
  
  /* Navbar (sticky, dark, icons only) */
@@ -81,6 +76,7 @@
    font-size: 2.8rem; /* Larger, modern title */
    color: #ffffff;
    margin-bottom: 1.5rem;
+   font-family: 'JetBrains Mono', 'Inter', Arial, sans-serif; /* Techy font for title */
    font-weight: 700;
    text-transform: uppercase;
    letter-spacing: 2px; /* Modern, sleek spacing */
@@ -112,11 +108,13 @@
    color: #b3d4fc;
    margin-bottom: 0.5rem;
    font-size: 1.6rem;
-   font-weight: 600;
+   font-family: 'JetBrains Mono', 'Inter', Arial, sans-serif; /* Techy font for headings */
+   font-weight: 700; /* Bold for clarity in monospace */
  }
  .project p {
    color: #e0e0e0;
    font-size: 1.1rem;
+   font-family: 'JetBrains Mono', 'Inter', Arial, sans-serif; /* Techy font for text */
  }
  .project a {
    color: #b3d4fc;
@@ -138,6 +136,7 @@
  .footer p {
    color: #b3d4fc;
    font-size: 0.9rem;
+   font-family: 'JetBrains Mono', 'Inter', Arial, sans-serif; /* Techy font for footer */
  }
  
  /* Full-screen "Green Hat Gravity" canvas (modern, centered) */
