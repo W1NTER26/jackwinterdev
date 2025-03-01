@@ -424,3 +424,71 @@ html, body {
   line-height: 1; /* Remove extra line height */
   transition: color 0.2s ease; /* Minimal transition */
 }
+
+
+
+
+
+/* about code */
+
+.about-block {
+  text-align: center; /* Center text */
+  max-width: 800px; /* Blocky, standard width */
+  padding: 1.5rem; /* Minimal padding for blockiness */
+  background-color: #343434; /* Medium-dark gray, like a house wall */
+  border-radius: 4px; /* Small, sharp corners for blockiness */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow, like a house foundation */
+  border: 1px solid #464646; /* Dark gray border for structure */
+  margin: 0 auto; /* Center the block */
+  transition: all 0.2s ease; /* Subtle transition */
+}
+.about-block:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow on hover, like house depth */
+}
+
+.about-block h1, .about-block h2 {
+  color: #ffffff; /* White for titles */
+  margin-bottom: 0.5rem; /* Reduced spacing for minimalism */
+  font-family: 'JetBrains Mono', 'Inter', Arial, sans-serif; /* Techy font */
+  font-weight: 700;
+  text-transform: uppercase; /* Blocky, modern style */
+  text-shadow: none; /* No shadow for blockiness */
+}
+
+.about-block hr {
+  border: 1px solid #464646; /* Dark gray accent line, like a house feature */
+  margin: 0.5rem 0; /* Minimal spacing */
+  width: 80%; /* Centered width for clean look */
+  max-width: 300px; /* Limit width for minimalism */
+}
+
+.about-block p, .about-block ul {
+  color: #e0e0e0; /* Light gray for text */
+  font-size: 1rem; /* Blocky, clean text */
+  margin-bottom: 0.5rem; /* Reduced spacing */
+  font-family: 'JetBrains Mono', 'Inter', Arial, sans-serif; /* Techy font */
+  list-style-type: none; /* Remove bullets for minimalism */
+  padding: 0;
+}
+.about-block ul li {
+  margin-left: 0; /* Remove default indentation */
+  padding-left: 1rem; /* Minimal padding for clean list */
+  position: relative; /* For custom bullets */
+}
+.about-block ul li::before {
+  content: '•'; /* Custom bullet */
+  color: #464646; /* Dark gray for blockiness */
+  position: absolute;
+  left: 0;
+  font-size: 0.8rem; /* Small, subtle bullet */
+}
+
+.about-block a {
+  color: #66d9ef; /* Techy cyan for links */
+  text-decoration: none;
+  transition: color 0.2s ease; /* Subtle transition */
+}
+.about-block a:hover {
+  color: #a0c8ff; /* Lighter cyan on hover */
+  text-decoration: underline;
+}
