@@ -14,137 +14,239 @@
    -webkit-text-size-adjust: 100%; /* 2 */
  }
  
- body.dark-mode {
-   background-color: #1e1e1e; /* Darker, sleek dark gray */
-   color: #ffffff; /* White text for contrast */
-   font-family: 'JetBrains Mono', 'Inter', Arial, sans-serif; /* Techy monospace font with fallback */
-   line-height: 1.6;
+ html, body {
+   margin: 0 !important;
+   padding: 0 !important;
+   height: 100%;
+   overflow-x: hidden; /* Prevent horizontal overflow */
  }
  
- /* Navbar (sticky, dark, icons only) */
+ body.dark-mode {
+   background-color: #1e1e1e; /* Dark gray base, modern house foundation */
+   color: #ffffff; /* White text for contrast */
+   font-family: 'JetBrains Mono', 'Inter', Arial, sans-serif; /* Techy monospace font */
+   line-height: 1.5; /* Clean, minimal line height */
+ }
+ 
+ /* Geometric background (blocky lines and shapes outside content) */
+ .geometric-background {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: #1e1e1e; /* Match body background */
+   z-index: -1; /* Behind content */
+   pointer-events: none; /* Non-interactive */
+ }
+ .geometric-background::before {
+   content: '';
+   position: absolute;
+   top: 15%;
+   left: 10%;
+   width: 2px;
+   height: 70%;
+   background: #464646; /* Dark gray vertical line, like a house beam */
+   opacity: 0.3; /* Subtle for minimalism */
+ }
+ .geometric-background::after {
+   content: '';
+   position: absolute;
+   top: 75%;
+   left: 80%;
+   width: 2px;
+   height: 20%;
+   background: #464646; /* Dark gray vertical line */
+   opacity: 0.3; /* Subtle for minimalism */
+ }
+ .geometric-background .block-1 {
+   position: absolute;
+   top: 5%;
+   left: 5%;
+   width: 100px;
+   height: 100px;
+   background: #575757; /* Light gray block, like a house feature */
+   opacity: 0.2; /* Very subtle */
+   border: 1px solid #464646; /* Dark gray border for structure */
+ }
+ .geometric-background .block-2 {
+   position: absolute;
+   top: 70%;
+   left: 80%;
+   width: 80px;
+   height: 80px;
+   background: #575757; /* Light gray block */
+   opacity: 0.2; /* Very subtle */
+   border: 1px solid #464646; /* Dark gray border */
+ }
+ .geometric-background .line-1 {
+   position: absolute;
+   top: 30%;
+   left: 20%;
+   width: 80%;
+   height: 1px;
+   background: #464646; /* Dark gray horizontal line, like a floor */
+   opacity: 0.3; /* Subtle for minimalism */
+ }
+ .geometric-background .line-2 {
+   position: absolute;
+   top: 80%;
+   left: 10%;
+   width: 60%;
+   height: 1px;
+   background: #464646; /* Dark gray horizontal line */
+   opacity: 0.3; /* Subtle for minimalism */
+ }
+ 
+ /* Navbar (sticky, blocky, left-centered icons, modern house facade) */
  .navbar {
-   background-color: #2a2a2a; /* Even darker navbar */
-   padding: 0.5rem; 
+   background-color: #2a2a2a; /* Even darker navbar, like a house roof */
+   padding: 0.5rem 1rem; /* Minimal padding for blockiness */
    position: fixed;
    width: 100%;
    top: 0;
    z-index: 1000;
-   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Stronger shadow for modern look */
+   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow, like a house edge */
    display: flex;
-   justify-content: center;
-   gap: 1rem; /* Space between icons */
-   transition: background-color 0.3s ease; /* Smooth transition */
+   justify-content: flex-start; /* Left-center icons */
+   gap: 1.5rem; /* Space between icons, like house spacing */
+   border-bottom: 2px solid #464646; /* Dark gray bottom line, like a house base */
+   border-radius: 0; /* Sharp corners for blockiness */
+   transition: background-color 0.2s ease; /* Subtle transition */
  }
  .navbar a {
-   color: #b3d4fc; /* Light blue for icons */
+   color: #b3d4fc; /* Light blue for icons, like house accents */
    text-decoration: none;
-   font-size: 1.5rem; /* Larger icons */
+   font-size: 1.6rem; /* Blocky, modern icons */
    display: flex;
    align-items: center;
+   justify-content: center;
+   padding: 0;
+   margin: 0;
+   line-height: 1;
+   transition: color 0.2s ease; /* Minimal transition */
  }
  .navbar a:hover {
-   color: #e6f7ff; /* Lighter blue on hover */
+   color: #e6f7ff; /* Lighter blue on hover, like house lighting */
  }
  .navbar i {
-   transition: transform 0.3s ease; /* Smooth icon scale on hover */
+   transition: transform 0.2s ease; /* Minimal transition */
  }
  .navbar a:hover i {
-   transform: scale(1.1); /* Slight scale on hover for modern feel */
+   transform: scale(1.05); /* Subtle scale for clean interactivity */
  }
  
- /* Main content (full-screen, centered, sleek) */
+ /* Main content (centered, blocky, modern house wall) */
  .main-content {
    max-width: 100%;
    margin: 60px 0 0; /* Offset for navbar */
    padding: 0;
-   background-color: transparent; /* No background for full-screen */
-   min-height: calc(100vh - 60px); /* Full screen minus navbar */
+   min-height: calc(100vh - 120px); /* Full screen minus navbar and footer */
    display: flex;
    justify-content: center;
    align-items: center;
+   overflow: hidden; /* Prevent overflow for cleanliness */
  }
- .content-wrapper {
+ .content-block {
    text-align: center; /* Center text */
-   max-width: 800px;
-   padding: 2rem;
-   background-color: rgba(43, 43, 43, 0.9); /* Semi-transparent darker background for content */
-   border-radius: 12px; /* Rounded corners for sleekness */
-   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Enhanced shadow for modern look */
-   transition: all 0.3s ease; /* Smooth transitions */
+   max-width: 800px; /* Blocky, standard width */
+   padding: 1.5rem; /* Minimal padding for blockiness */
+   background-color: #343434; /* Medium-dark gray, like a house wall */
+   border-radius: 4px; /* Small, sharp corners for blockiness */
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow, like a house foundation */
+   border: 1px solid #464646; /* Dark gray border for structure */
+   transition: all 0.2s ease; /* Subtle transition */
+ }
+ .content-block:hover {
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow on hover, like house depth */
  }
  .site-title {
-   font-size: 2.8rem; /* Larger, modern title */
+   font-size: 2.5rem; /* Blocky, bold title */
    color: #ffffff;
-   margin-bottom: 1.5rem;
-   font-family: 'JetBrains Mono', 'Inter', Arial, sans-serif; /* Techy font for title */
+   margin-bottom: 1rem; /* Reduced spacing for minimalism */
+   font-family: 'JetBrains Mono', 'Inter', Arial, sans-serif; /* Techy font */
    font-weight: 700;
    text-transform: uppercase;
-   letter-spacing: 2px; /* Modern, sleek spacing */
-   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
+   letter-spacing: 1px; /* Minimal spacing for clean blockiness */
+   text-shadow: none; /* No shadow for blockiness */
  }
  
- /* Project list (modern, centered, sleek cards) */
+ /* Project list (blocky, centered, modern house rooms) */
  .project-list {
    display: grid;
-   gap: 1.5rem;
+   gap: 1.2rem; /* Reduced spacing for blockiness */
    list-style: none;
    padding: 0;
-   max-width: 800px;
+   max-width: 800px; /* Blocky width */
    margin: 0 auto; /* Center the grid */
  }
  .project {
-   padding: 1.5rem;
-   background-color: #2b2b2b; /* Slightly darker for sleekness */
-   border-radius: 12px; /* Larger rounded corners */
-   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Enhanced shadow */
+   padding: 1.2rem; /* Minimal padding for blockiness */
+   background-color: #343434; /* Medium-dark gray, like house rooms */
+   border-radius: 4px; /* Small, sharp corners */
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+   border: 1px solid #464646; /* Dark gray border for structure */
    text-align: center; /* Center content */
-   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+   transition: transform 0.2s ease, box-shadow 0.2s ease; /* Subtle transitions */
  }
  .project:hover {
-   transform: translateY(-5px); /* Lift on hover for modern feel */
-   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5); /* Stronger shadow on hover */
+   transform: translateY(-3px); /* Subtle lift for clean interactivity */
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow on hover, like house depth */
  }
  .project h2 {
    color: #b3d4fc;
-   margin-bottom: 0.5rem;
-   font-size: 1.6rem;
-   font-family: 'JetBrains Mono', 'Inter', Arial, sans-serif; /* Techy font for headings */
-   font-weight: 700; /* Bold for clarity in monospace */
+   margin-bottom: 0.5rem; /* Reduced spacing */
+   font-size: 1.5rem; /* Blocky, clean heading */
+   font-family: 'JetBrains Mono', 'Inter', Arial, sans-serif; /* Techy font */
+   font-weight: 700;
+   text-shadow: none; /* No shadow for blockiness */
  }
  .project p {
    color: #e0e0e0;
-   font-size: 1.1rem;
-   font-family: 'JetBrains Mono', 'Inter', Arial, sans-serif; /* Techy font for text */
+   font-size: 1rem; /* Blocky, clean text */
+   font-family: 'JetBrains Mono', 'Inter', Arial, sans-serif; /* Techy font */
  }
  .project a {
-   color: #b3d4fc;
+   color: #66d9ef; /* Techy cyan for links */
    text-decoration: none;
+   transition: color 0.2s ease; /* Subtle transition */
  }
  .project a:hover {
+   color: #a0c8ff; /* Lighter cyan on hover */
    text-decoration: underline;
-   color: #e6f7ff;
  }
  
- /* Footer (dark, centered, sleek) */
+ /* Specific link in index.md (e.g., Projects) */
+ body.dark-mode .special-project-link {
+   color: #66d9ef; /* Bright cyan for techy look */
+   text-decoration: none;
+   transition: color 0.2s ease; /* Subtle transition */
+ }
+ body.dark-mode .special-project-link:hover {
+   color: #a0c8ff; /* Lighter cyan on hover */
+   text-decoration: underline;
+ }
+ 
+ /* Footer (blocky, centered, modern house base) */
  .footer {
-   background-color: #1e1e1e; /* Match body background */
-   padding: 1rem;
+   background-color: #2b2b2b; /* Slightly darker gray, like a house base */
+   padding: 0.8rem; /* Minimal padding for blockiness */
    text-align: center;
-   border-top: 1px solid #3a3a3a; /* Slightly lighter border */
-   margin-top: 2rem;
+   border-top: 2px solid #464646; /* Dark gray border for structure */
+   margin-top: 1rem; /* Reduced spacing */
  }
  .footer p {
    color: #b3d4fc;
-   font-size: 0.9rem;
-   font-family: 'JetBrains Mono', 'Inter', Arial, sans-serif; /* Techy font for footer */
+   font-size: 0.9rem; /* Blocky, clean text */
+   font-family: 'JetBrains Mono', 'Inter', Arial, sans-serif; /* Techy font */
  }
  
- /* Full-screen "Green Hat Gravity" canvas (modern, centered) */
+ /* Full-screen "Green Hat Gravity" canvas (blocky, centered, modern house feature) */
  .game-container {
-   background: #000 !important; /* Keep game’s black background */
+   background: #000 !important; /* Keep game’s black background, like a house core */
    overflow: hidden;
    margin: 0;
-   border: 2px solid #ff4444;
+   border: 2px solid #ff4444; /* Red border, like a house accent */
    width: 100vw; /* Full viewport width */
    height: 100vh; /* Full viewport height */
    max-width: none; /* Remove max-width for full screen */
@@ -152,33 +254,49 @@
    display: flex;
    justify-content: center;
    align-items: center; /* Center the canvas */
+   border-radius: 4px; /* Small, sharp corners for blockiness */
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow, like a house feature */
+   transition: border-color 0.2s ease, box-shadow 0.2s ease; /* Subtle transitions */
+ }
+ .game-container:hover {
+   border-color: #ff6666; /* Lighter red on hover for contrast */
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow on hover */
  }
  canvas {
    display: block;
    width: 100%; /* Fill container */
    height: 100%; /* Fill container */
    object-fit: contain; /* Maintain aspect ratio, no stretching */
+   transition: transform 0.2s ease; /* Subtle transition */
+ }
+ .game-container:hover canvas {
+   transform: scale(1.02); /* Subtle scale on hover for clean interactivity */
  }
  
- /* Responsive design (mobile-friendly) */
+ /* Responsive design (mobile-friendly, blocky) */
  @media (max-width: 768px) {
    .main-content {
      margin: 60px 0 0;
      padding: 0;
    }
-   .content-wrapper {
+   .content-block {
      padding: 1rem;
-     margin: 0 1rem;
+     margin: 0 0.5rem;
+     max-width: 90%; /* More flexible on mobile */
+     border-radius: 4px; /* Small, sharp corners on mobile */
    }
    .navbar {
-     padding: 0.3rem;
-     gap: 0.5rem;
+     padding: 0.2rem 0.8rem;
+     gap: 1rem;
    }
    .nav-link {
-     font-size: 1.2rem;
+     font-size: 1.4rem;
    }
    .site-title {
      font-size: 2.2rem;
+   }
+   .project-list {
+     gap: 1rem;
    }
    .project {
      padding: 1rem;
@@ -187,16 +305,31 @@
      font-size: 1.4rem;
    }
    .project p {
-     font-size: 1rem;
+     font-size: 0.9rem;
    }
    .game-container {
      border-width: 1px; /* Thinner border on mobile */
+     border-radius: 4px; /* Small, sharp corners */
+   }
+   .footer {
+     padding: 0.6rem;
+   }
+   .footer p {
+     font-size: 0.8rem;
+   }
+   .geometric-background::before, .geometric-background::after,
+   .geometric-background .block-1, .geometric-background .block-2,
+   .geometric-background .line-1, .geometric-background .line-2 {
+     display: none; /* Remove patterns on mobile for simplicity */
    }
  }
  
- /* Highlight (code blocks) for dark mode */
+ /* Highlight (code blocks) for dark mode, blocky, clean */
  .highlight {
-   background-color: #2b2b2b; /* Darker gray for code blocks */
+   background-color: #2b2b2b; /* Clean, solid dark gray */
+   border-radius: 4px; /* Small, sharp corners */
+   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1); /* Minimal shadow */
+   border: 1px solid #464646; /* Dark gray border for blockiness */
  }
  .highlight .cm, .highlight .cp, .highlight .c1, .highlight .cs, .highlight .c, .highlight .cd {
    color: #999988; /* Gray comments */
@@ -235,9 +368,9 @@
    color: #f8f8f2; /* White for operators */
  }
  
- /* Transitions for smooth, modern effects */
- .navbar, .nav-link, .main-content, .content-wrapper, .footer, .project {
-   transition: all 0.3s ease;
+ /* Minimal transitions for clean, blocky interactivity */
+ .navbar, .nav-link, .main-content, .content-block, .footer, .project, .game-container, canvas {
+   transition: all 0.2s ease; /* Light, subtle transitions */
  }
 
 
@@ -252,4 +385,42 @@ body.dark-mode .main-content a[href="/projects"] {
 body.dark-mode .main-content a[href="/projects"]:hover {
   color: #a0c8ff; /* Lighter cyan on hover */
   text-decoration: underline;
+}
+
+
+/* Added nav bar styles*/
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+.navbar {
+  background-color: #2a2a2a; /* Even darker navbar, like a house roof */
+  padding: 0; /* Remove padding to eliminate gap */
+  position: fixed;
+  width: 100%;
+  top: 0; /* Ensure it starts at the very top */
+  z-index: 1000;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow, like a house edge */
+  display: flex;
+  justify-content: center; /* Center horizontally for left-middle effect */
+  gap: 1.5rem; /* Space between icons, like house spacing */
+  border-bottom: 2px solid #464646; /* Dark gray bottom line, like a house base */
+  border-radius: 0; /* Sharp corners for blockiness */
+  transition: background-color 0.2s ease; /* Subtle transition */
+}
+
+.navbar a {
+  color: #b3d4fc; /* Light blue for icons, like house accents */
+  text-decoration: none;
+  font-size: 1.6rem; /* Blocky, modern icons */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 !important; /* Remove any padding */
+  margin: 0 !important; /* Remove any margin */
+  line-height: 1; /* Remove extra line height */
+  transition: color 0.2s ease; /* Minimal transition */
 }
