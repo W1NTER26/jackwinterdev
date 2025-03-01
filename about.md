@@ -13,6 +13,6 @@ I’m Jack Winter, a CS Major at the University of Arizona.
 
 ## Interests
 -----
-- Productivty
+- Productivity
 - Web Design
 - Game Design

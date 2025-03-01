@@ -429,22 +429,26 @@ html, body {
 
 
 
+
+
+
+
 /* about code */
 
 .about-block {
   text-align: center; /* Center text */
-  max-width: 800px; /* Blocky, standard width */
+  width: 90%; /* Wider block for modern house wall effect */
+  max-width: 900px; /* Limit width for cleanliness, adjustable for blockiness */
   padding: 1.5rem; /* Minimal padding for blockiness */
-  background-color: #343434; /* Medium-dark gray, like a house wall */
-  border-radius: 4px; /* Small, sharp corners for blockiness */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow, like a house foundation */
-  border: 1px solid #464646; /* Dark gray border for structure */
-  margin: 0 auto; /* Center the block */
+  /* background-color: #343434; Medium-dark gray, like a house wall */
+  /* border-radius: 4px; /* Small, sharp corners for blockiness */
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); Reduced shadow for clean, minimal look */
+  margin: 0 auto; /* Center the block horizontally */
   transition: all 0.2s ease; /* Subtle transition */
 }
-.about-block:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow on hover, like house depth */
-}
+/* .about-block:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow on hover, minimal ring */
+/*} */
 
 .about-block h1, .about-block h2 {
   color: #ffffff; /* White for titles */
