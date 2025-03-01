@@ -1,6 +1,6 @@
 ---
 layout: default
-title: JW | website project
+title: jackwinterdev
 description: The Jackwinter.dev Website
 url: /projects/website/
 category: Web

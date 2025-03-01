@@ -1,6 +1,6 @@
 ---
 layout: default
-title: JW | projects
+title: Projects
 ---
 # My Projects
 

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: JW | home
+title: Home
 ---
 # Welcome!
 

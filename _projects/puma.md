@@ -1,6 +1,6 @@
 ---
 layout: default
-title: JW | puma bot
+title: Puma Bot
 description: Puma Discord Bot
 url: /projects/puma/
 category: JS
