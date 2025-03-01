@@ -551,17 +551,17 @@ html, body {
     .projects-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Flexible columns, minimum 300px each, auto-fit for centering and even distribution */
-      gap: 1.2rem; /* Reduced spacing for blockiness */
+      gap: 1.2rem; /*Reduced spacing for blockiness */
       justify-content: center; /* Center projects horizontally in the grid */
       align-items: center; /* Align items vertically */
       width: fit-content; /* Adjust width to fit content, ensuring centering */
       margin: 0 auto; /* Center the grid within .category-row */
       padding: 0; /* Remove any padding that could misalign */
-      min-width: 500px;
+      min-width: 450px;
       max-width: 100%; /* Ensure it doesn’t exceed container width */
     }
     .project {
-      padding: 1.2rem; /* Minimal padding for blockiness */
+      padding: 1.2rem; /*Minimal padding for blockiness*/
       background-color: #343434; /* Medium-dark gray, like house rooms */
       border-radius: 4px; /* Small, sharp corners */
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Reduced shadow for clean look */
@@ -607,7 +607,7 @@ html, body {
     @media (max-width: 768px) {
       .project-list {
         max-width: 90%; /* More flexible on mobile */
-        padding: 0 0.5rem; /* Reduced padding on mobile */
+        padding: 0 0.5rem; /*Reduced padding on mobile*/
       }
       .category-row {
         margin-bottom: 1.5rem; /* Reduced spacing between categories on mobile */
@@ -621,10 +621,10 @@ html, body {
       }
       .projects-container {
         grid-template-columns: 1fr; /* Single column on mobile */
-        gap: 1rem; /* Reduced gap for mobile */
+        gap: 1rem; /*Reduced gap for mobile */
       }
       .project {
-        /* padding: 1rem; Reduced padding on mobile */
+        padding: 1rem; /*Reduced padding on mobile */
         min-width: auto; /* Remove min-width on mobile for full flexibility */
         max-width: 100%; /* Ensure full width on mobile */
       }
