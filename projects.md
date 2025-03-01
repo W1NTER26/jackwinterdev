@@ -1,6 +1,6 @@
 ---
 layout: default
-title: JS | projects
+title: JW | projects
 ---
 # My Projects
 

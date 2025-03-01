@@ -1,6 +1,6 @@
 ---
 layout: default
-title: jackwinter.dev
+title: JW | home
 ---
 # Welcome!
 
