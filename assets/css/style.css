@@ -398,7 +398,7 @@ html, body {
 
 .navbar {
   background-color: #2a2a2a; /* Even darker navbar, like a house roof */
-  padding: 0; /* Remove padding to eliminate gap */
+  padding: 1rm; /* Remove padding to eliminate gap */
   position: fixed;
   width: 100%;
   top: 0; /* Ensure it starts at the very top */
