@@ -378,14 +378,17 @@
 
 /* Added my own link css code,*/
 
-body.dark-mode .main-content a[href="/projects"] {
+body.dark-mode .main-content a {
   color: #66d9ef; /* Bright cyan for techy look */
   text-decoration: none;
 }
-body.dark-mode .main-content a[href="/projects"]:hover {
+body.dark-mode .main-content a:hover {
   color: #a0c8ff; /* Lighter cyan on hover */
   text-decoration: underline;
 }
+
+
+
 
 
 /* Added nav bar styles*/
@@ -499,3 +502,136 @@ html, body {
   color: #a0c8ff; /* Lighter cyan on hover */
   text-decoration: underline;
 }
+
+
+
+
+
+
+
+/* Project List and Cards
+   - Blocky, centered cards for modern house rooms
+   - Sharp corners, minimal shadows, organized into categorized rows with headings
+   - Centered project cards with min-width 300px, dynamically adjust to ~3 per row on desktop,
+     projects push each other evenly to stay centered, mobile-responsive */
+     .project-list {
+      display: block; /* Change to block for wrapping category rows */
+      max-width: 1000px; /* Wider for larger blocks, adjustable for blockiness */
+      margin: 0 auto; /* Center the entire list */
+      padding: 0 1rem; /* Minimal horizontal padding for modern house effect */
+    }
+    .category-row {
+      margin-bottom: 2rem; /* Space between categories */
+      text-align: center; /* Center the entire category row */
+      display: flex; /* Use flex to center the projects-container */
+      flex-direction: column; /* Stack heading and projects vertically */
+      align-items: center; /* Center horizontally */
+    }
+    .category-heading {
+      color: #ffffff; /* White for headings, like house features */
+      font-size: 1.8rem; /* Blocky, bold heading */
+      font-family: 'JetBrains Mono', 'Inter', Arial, sans-serif; /* Techy font */
+      font-weight: 700;
+      text-transform: uppercase; /* Blocky, modern style */
+      text-shadow: none; /* No shadow for blockiness */
+      margin-bottom: 0.5rem; /* Minimal spacing below heading */
+      position: relative; /* For line above */
+    }
+    .category-heading::before {
+      content: ''; /* Create line above heading */
+      position: absolute;
+      top: -0.5rem; /* Position above heading */
+      left: 50%; /* Center horizontally */
+      transform: translateX(-50%); /* Shift to center */
+      width: 80%; /* Width of the line */
+      max-width: 300px; /* Limit for minimalism */
+      height: 1px; /* Thin line */
+      background-color: #464646; /* Dark gray line, like a house separator */
+    }
+    .projects-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Flexible columns, minimum 300px each, auto-fit for centering and even distribution */
+      gap: 1.2rem; /* Reduced spacing for blockiness */
+      justify-content: center; /* Center projects horizontally in the grid */
+      align-items: center; /* Align items vertically */
+      width: fit-content; /* Adjust width to fit content, ensuring centering */
+      margin: 0 auto; /* Center the grid within .category-row */
+      padding: 0; /* Remove any padding that could misalign */
+      min-width: 500px;
+      max-width: 100%; /* Ensure it doesn’t exceed container width */
+    }
+    .project {
+      padding: 1.2rem; /* Minimal padding for blockiness */
+      background-color: #343434; /* Medium-dark gray, like house rooms */
+      border-radius: 4px; /* Small, sharp corners */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Reduced shadow for clean look */
+      text-align: center; /* Center content */
+      transition: transform 0.2s ease, box-shadow 0.2s ease; /* Subtle transitions */
+      min-width: 300px; /* Minimum width for wider blocks, adjustable for blockiness */
+      max-width: 100%; /* Ensure projects don’t exceed container width */
+      margin: 0 auto; /* Center individual project cards within their grid cell */
+      display: flex; /* Use flex to center content within project */
+      flex-direction: column; /* Stack content vertically */
+      justify-content: center; /* Center content vertically */
+      align-items: center; /* Center content horizontally within project */
+    }
+    .project:hover {
+      transform: translateY(-3px); /* Subtle lift for clean interactivity */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow on hover */
+    }
+    .project h3 {
+      color: #b3d4fc;
+      margin-bottom: 0.5rem; /* Reduced spacing */
+      font-size: 1.5rem; /* Blocky, clean heading */
+      font-family: 'JetBrains Mono', 'Inter', Arial, sans-serif; /* Techy font */
+      font-weight: 700;
+      text-shadow: none; /* No shadow for blockiness */
+    }
+    .project p {
+      color: #e0e0e0;
+      font-size: 1rem; /* Blocky, clean text */
+      font-family: 'JetBrains Mono', 'Inter', Arial, sans-serif; /* Techy font */
+    }
+    .project a {
+      color: #66d9ef; /* Techy cyan for links */
+      text-decoration: none;
+      transition: color 0.2s ease; /* Subtle transition */
+    }
+    .project a:hover {
+      color: #a0c8ff; /* Lighter cyan on hover */
+      text-decoration: underline;
+    }
+    
+    /* Responsive Design for Mobile
+       - Scale projects to single column, adjust spacing for mobile devices */
+    @media (max-width: 768px) {
+      .project-list {
+        max-width: 90%; /* More flexible on mobile */
+        padding: 0 0.5rem; /* Reduced padding on mobile */
+      }
+      .category-row {
+        margin-bottom: 1.5rem; /* Reduced spacing between categories on mobile */
+      }
+      .category-heading {
+        font-size: 1.6rem; /* Slightly smaller heading on mobile */
+      }
+      .category-heading::before {
+        width: 60%; /* Narrower line on mobile */
+        max-width: 200px; /* Limit for minimalism */
+      }
+      .projects-container {
+        grid-template-columns: 1fr; /* Single column on mobile */
+        gap: 1rem; /* Reduced gap for mobile */
+      }
+      .project {
+        padding: 1rem; /* Reduced padding on mobile */
+        min-width: auto; /* Remove min-width on mobile for full flexibility */
+        max-width: 100%; /* Ensure full width on mobile */
+      }
+      .project h3 {
+        font-size: 1.4rem; /* Slightly smaller heading on mobile */
+      }
+      .project p {
+        font-size: 0.9rem; /* Slightly smaller text on mobile */
+      }
+    }

@@ -3,6 +3,7 @@ layout: default
 title: Green Hat Gravity
 description: Space Platform Game
 url: /projects/ghg/
+category: Game
 ---
 Enter Full Screen to Play
 

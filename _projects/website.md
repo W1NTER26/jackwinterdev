@@ -3,9 +3,8 @@ layout: default
 title: The Website
 description: The Jackwinter.dev Website
 url: /projects/website/
+category: Web
 ---
-The Website.
+This is my personal portfolio website, built with Jekyll and hosted on GitHub Pages.
 
-One of my projects is the website itself. I wrote it using Jeykll, HTML and CSS.
-
-I created it as a place to post showcase all of my projects and skillsets.
+[View Github](https://github.com/W1NTER26/jackwinterdev)
