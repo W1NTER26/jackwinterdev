@@ -606,7 +606,7 @@ html, body {
        - Scale projects to single column, adjust spacing for mobile devices */
     @media (max-width: 768px) {
       .project-list {
-        max-width: 90%; /* More flexible on mobile */
+        max-width: 100%; /* More flexible on mobile */
         padding: 0 0.5rem; /* Reduced padding on mobile */
       }
       .category-row {
