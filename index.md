@@ -11,4 +11,4 @@ I'm Jack Winter
 I'm a CS Major at the University of Arizona. Check out my [Projects](/projects)!
 
 
-[Website is Under Development]
+<span style="color: #2D6FFF">[Website is Under Development]</span>
