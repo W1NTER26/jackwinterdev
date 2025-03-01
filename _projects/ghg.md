@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Green Hat Gravity
+title: JW | ghg
 description: Space Platform Game
 url: /projects/ghg/
 category: Game
