@@ -457,9 +457,11 @@ html, body {
 
 .about-block hr {
   border: 1px solid #464646; /* Dark gray accent line, like a house feature */
-  margin: 0.5rem 0; /* Minimal spacing */
+  /* margin: 0.5rem 0; Minimal spacing */
   width: 80%; /* Centered width for clean look */
   max-width: 300px; /* Limit width for minimalism */
+  vertical-align: center;
+  text-align: center;
 }
 
 .about-block p, .about-block ul {
@@ -470,18 +472,19 @@ html, body {
   list-style-type: none; /* Remove bullets for minimalism */
   padding: 0;
 }
-.about-block ul li {
+
+/* .about-block ul li {
   margin-left: 0; /* Remove default indentation */
-  padding-left: 1rem; /* Minimal padding for clean list */
-  position: relative; /* For custom bullets */
-}
-.about-block ul li::before {
+  /*padding-left: 1rem; /* Minimal padding for clean list */
+  /*position: relative; /* For custom bullets */
+/*}*/
+/* .about-block ul li::before {
   content: '•'; /* Custom bullet */
-  color: #464646; /* Dark gray for blockiness */
-  position: absolute;
+  /*color: #464646; /* Dark gray for blockiness */
+  /*position: absolute;
   left: 0;
   font-size: 0.8rem; /* Small, subtle bullet */
-}
+/*}*/ 
 
 .about-block a {
   color: #66d9ef; /* Techy cyan for links */
