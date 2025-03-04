@@ -512,13 +512,14 @@ html, body {
 /* Project List and Cards
    - Blocky, centered cards for modern house rooms
    - Sharp corners, minimal shadows, organized into categorized rows with headings
-   - Centered project cards with min-width 300px, dynamically adjust to ~3 per row on desktop,
-     projects push each other evenly to stay centered, mobile-responsive */
+   - Centered project cards with consistent sizes on mobile, scaling down proportionally,
+     dynamically adjust to ~3 per row on desktop, mobile-responsive */
      .project-list {
       display: block; /* Change to block for wrapping category rows */
-      max-width: 1000px; /* Wider for larger blocks, adjustable for blockiness */
+      max-width: 1000px; /* Wider for larger blocks, adjustable for blockiness on desktop */
       margin: 0 auto; /* Center the entire list */
       padding: 0 1rem; /* Minimal horizontal padding for modern house effect */
+      width: 100%; /* Ensure full width on mobile */
     }
     .category-row {
       margin-bottom: 2rem; /* Space between categories */
@@ -526,6 +527,7 @@ html, body {
       display: flex; /* Use flex to center the projects-container */
       flex-direction: column; /* Stack heading and projects vertically */
       align-items: center; /* Center horizontally */
+      width: 100%; /* Ensure full width */
     }
     .category-heading {
       color: #ffffff; /* White for headings, like house features */
@@ -550,30 +552,33 @@ html, body {
     }
     .projects-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Flexible columns, minimum 300px each, auto-fit for centering and even distribution */
-      gap: 1.2rem; /*Reduced spacing for blockiness */
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjusted to 250px min-width for consistency, flexible columns */
+      gap: 1.2rem; /* Reduced spacing for blockiness */
       justify-content: center; /* Center projects horizontally in the grid */
       align-items: center; /* Align items vertically */
-      width: fit-content; /* Adjust width to fit content, ensuring centering */
-      margin: 0 auto; /* Center the grid within .category-row */
+      width: 100%; /* Full width for mobile */
+      margin: 0 auto; /* Ensure centered within .category-row */
       padding: 0; /* Remove any padding that could misalign */
-      /* min-width: 450px; */ /* Makes the mobile scaling bad*/
-      max-width: 100%; /* Ensure it doesn’t exceed container width */
+      max-width: 100%; /* Ensure full width on mobile */
+      box-sizing: border-box; /* Include padding in width calculation */
     }
     .project {
-      padding: 1.2rem; /*Minimal padding for blockiness*/
+      padding: 1.2rem; /* Minimal padding for blockiness */
       background-color: #343434; /* Medium-dark gray, like house rooms */
       border-radius: 4px; /* Small, sharp corners */
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Reduced shadow for clean look */
+      /* border: none; Remove border for clean blockiness */
       text-align: center; /* Center content */
       transition: transform 0.2s ease, box-shadow 0.2s ease; /* Subtle transitions */
-      min-width: 300px; /* Minimum width for wider blocks, adjustable for blockiness */
+      min-width: 250px; /* Reduced min-width for consistent sizing on mobile */
       max-width: 100%; /* Ensure projects don’t exceed container width */
+      width: 100%; /* Consistent width on mobile */
       margin: 0 auto; /* Center individual project cards within their grid cell */
       display: flex; /* Use flex to center content within project */
       flex-direction: column; /* Stack content vertically */
       justify-content: center; /* Center content vertically */
       align-items: center; /* Center content horizontally within project */
+      box-sizing: border-box; /* Include padding in width calculation */
     }
     .project:hover {
       transform: translateY(-3px); /* Subtle lift for clean interactivity */
@@ -603,14 +608,16 @@ html, body {
     }
     
     /* Responsive Design for Mobile
-       - Scale projects to single column, adjust spacing for mobile devices */
+       - Scale projects to consistent size, adjust spacing for mobile devices
+       - Ensure full screen width and uniform box sizes */
     @media (max-width: 768px) {
       .project-list {
-        max-width: 90%; /* More flexible on mobile */
-        padding: 0 0.5rem; /*Reduced padding on mobile*/
+        max-width: 100%; /* Full width on mobile */
+        padding: 0 0.5rem; /* Reduced padding on mobile */
       }
       .category-row {
         margin-bottom: 1.5rem; /* Reduced spacing between categories on mobile */
+        width: 100%; /* Ensure full width */
       }
       .category-heading {
         font-size: 1.6rem; /* Slightly smaller heading on mobile */
@@ -621,12 +628,14 @@ html, body {
       }
       .projects-container {
         grid-template-columns: 1fr; /* Single column on mobile */
-        gap: 1rem; /*Reduced gap for mobile */
+        gap: 1rem; /* Reduced gap for mobile */
+        width: 100%; /* Full width on mobile */
       }
       .project {
-        padding: 1rem; /*Reduced padding on mobile */
-        min-width: auto; /* Remove min-width on mobile for full flexibility */
-        max-width: 100%; /* Ensure full width on mobile */
+        padding: 1rem; /* Reduced padding on mobile */
+        min-width: 200px; /* Consistent minimum width on mobile, scaled down */
+        width: 100%; /* Ensure full width on mobile */
+        max-width: 100%; /* Prevent overflow */
       }
       .project h3 {
         font-size: 1.4rem; /* Slightly smaller heading on mobile */
