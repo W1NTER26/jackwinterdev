@@ -557,7 +557,7 @@ html, body {
       width: fit-content; /* Adjust width to fit content, ensuring centering */
       margin: 0 auto; /* Center the grid within .category-row */
       padding: 0; /* Remove any padding that could misalign */
-      min-width: 450px;
+      /* min-width: 450px; */ /* Makes the mobile scaling bad*/
       max-width: 100%; /* Ensure it doesn’t exceed container width */
     }
     .project {
