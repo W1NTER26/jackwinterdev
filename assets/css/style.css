@@ -635,3 +635,83 @@ html, body {
         font-size: 0.9rem; /* Slightly smaller text on mobile */
       }
     }
+
+
+
+
+    /* ADDED CSS FOR THE PROJECT PAGE LAYOUTS*/
+
+
+/* Project Detail Layout
+   - Blocky, modern house-inspired layout for individual project pages
+   - Midsized center block with a divider at 2/3 width, text on left, images on right
+   - Centered and responsive for mobile */
+   .project-detail-block {
+    max-width: 800px; /* Midsized block, adjustable for centering */
+    margin: 0 auto; /* Center the block horizontally */
+    padding: 1rem; /* Minimal padding for modern house effect */
+    display: grid;
+    grid-template-columns: 2fr 1px 1fr; /* 2/3 text, divider, 1/3 images */
+    gap: 1.2rem; /* Reduced spacing for blockiness */
+    width: 90%; /* Flexible width for responsiveness */
+    background-color: #1e1e1e; /* Match body background for clean integration */
+  }
+  .project-text-section {
+    background-color: #343434; /* Medium-dark gray, like a house wall */
+    border-radius: 4px; /* Small, sharp corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Minimal shadow */
+    padding: 1.5rem; /* Minimal padding for blockiness */
+    text-align: left; /* Left-align text for readability */
+    font-family: 'JetBrains Mono', 'Inter', Arial, sans-serif; /* Techy font */
+    color: #e0e0e0; /* Light gray for text */
+    font-size: 1rem; /* Blocky, clean text */
+    grid-column: 1 / 2; /* Occupy left 2/3 */
+  }
+  .project-divider {
+    background-color: #464646; /* Dark gray line, like a house divider */
+    grid-column: 2 / 3; /* Span the divider column */
+    margin: auto 0; /* Center vertically */
+  }
+  .project-image-section {
+    background-color: #343434; /* Medium-dark gray, like a house wall */
+    border-radius: 4px; /* Small, sharp corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Minimal shadow */
+    padding: 1rem; /* Minimal padding for blockiness */
+    display: grid;
+    grid-template-columns: 1fr; /* Single column for images on desktop */
+    gap: 1rem; /* Spacing between images */
+    height: fit-content; /* Adjust height to content */
+    grid-column: 3 / 4; /* Occupy right 1/3 */
+    overflow: hidden; /* Prevent image overflow */
+  }
+  .project-image {
+    width: 100%; /* Full width within grid cell */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 4px; /* Match blocky corners */
+    object-fit: cover; /* Ensure images fill space without distortion */
+    max-height: 200px; /* Limit image height for consistency */
+  }
+  
+  /* Responsive Design for Mobile
+     - Stack blocks vertically on mobile for full width */
+  @media (max-width: 768px) {
+    .project-detail-block {
+      grid-template-columns: 1fr; /* Single column on mobile */
+      width: 95%; /* Slightly wider on mobile */
+      padding: 0.5rem; /* Reduced padding on mobile */
+      gap: 1rem; /* Reduced gap on mobile */
+    }
+    .project-text-section {
+      padding: 1rem; /* Reduced padding on mobile */
+    }
+    .project-divider {
+      display: none; /* Hide divider on mobile for simplicity */
+    }
+    .project-image-section {
+      grid-template-columns: 1fr; /* Single column for images on mobile */
+      padding: 0.5rem; /* Reduced padding on mobile */
+    }
+    .project-image {
+      max-height: 150px; /* Smaller images on mobile */
+    }
+  }

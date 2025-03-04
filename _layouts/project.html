@@ -1,0 +1,18 @@
+---
+layout: default
+---
+  <div class="project-detail-block">
+    <div class="project-text-section">
+      {{ content }}
+    </div>
+    <div class="project-divider"></div>
+    <div class="project-image-section">
+      {% if page.images %}
+        {% for image in page.images %}
+          <img src="{{ image }}" alt="{{ page.title }} Image" class="project-image">
+        {% endfor %}
+      {% else %}
+        <p>No images available for this project.</p>
+      {% endif %}
+    </div>
+  </div>
