@@ -16,5 +16,5 @@ This is my personal portfolio website, built with Jekyll and hosted on GitHub Pa
 
 
 ## Features
-- Responsive design
-- Project showcase
+- Showcases my work
+- A place to explore my projects
